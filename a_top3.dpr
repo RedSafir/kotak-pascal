@@ -37,30 +37,60 @@ begin
   i := i + 1;
   end;
 
-  //=========== kiri ============//
+    //============= bawah =============//
 
-  i := T;
+  i := R;
 
-  while i < B do
-  begin
-  GotoXY(T,i);
-  write('A');
-  delay(d);
-  i := i + 1;
-  end;
-
-  //============= bawah =============//
-
-  i:= L;
-
-  while i < R do
+  while i > L do
   begin
   GotoXY(i,B);
   write('A');
   delay(d);
-  i := i + 1;
+  i := i - 1;
   end;
+
+  //=========== kiri ============//
+
+  i := B;
+
+  while i > T do
+  begin
+  GotoXY(T,i);
+  write('A');
+  delay(d);
+  i := i - 1;
+  end;
+
+
 
   readkey;
 end.
- 
+
+{
+//============= bawah =============//
+
+  i := R;
+
+  a_Dwn:;
+  GotoXY(i,B);
+
+  write('A');
+  delay(d);
+  i := i - 1;
+  if i > L then
+  goto a_Dwn;
+
+
+  //=========== kiri ============//
+
+  i := B;
+
+  a_Lft:;
+  GotoXY(T,i);
+
+  write('A');
+  delay(d);
+  i := i - 1;
+  if i > T then
+  goto a_Lft;
+}

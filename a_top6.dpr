@@ -32,24 +32,26 @@ begin
    delay(d);
   end;
 
-  //=========== kiri ============//
-
-  for i := T to B do
-  begin
-   GotoXY(T,i);
-   write('|');
-   delay(d);
-  end;
-
   //============= bawah =============//
 
-  for i := L to R do
+  for i := R downto L do
   begin
    GotoXY(i,B);
    write('-');
    delay(d);
   end;
 
+
+  //=========== kiri ============//
+
+  for i := B downto T do
+  begin
+   GotoXY(T,i);
+   write('|');
+   delay(d);
+  end;
+
   readkey;
 end.
- 
+
+

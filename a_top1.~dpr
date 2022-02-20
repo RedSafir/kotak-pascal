@@ -52,12 +52,13 @@ begin
 
   //============= bawah =============//
 
-  T:= i;
+  i:= L;
   a_Dwn:;
-  GotoXY(i,T);
+  GotoXY(i,B);
 
   write('A');
   delay(d);
+  i := i + 1;
   if i < R then
   goto a_Dwn;
 

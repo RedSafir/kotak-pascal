@@ -17,49 +17,53 @@ begin
 
   i:=L;
 
-  while i < R do
+  repeat
   begin
     GotoXY(i,T);
     write('A');
     delay(d);
     i := i + 1;
   end;
+  until i > R;
 
   //========== kanan ===========//
 
   i := T;
 
-  while i < B do
+  repeat
   begin
-  GotoXY(R,i);
-  write('A');
-  delay(d);
-  i := i + 1;
+   GotoXY(R,i);
+   write('A');
+   delay(d);
+   i := i + 1;
   end;
+  until i > B;
 
   //=========== kiri ============//
 
   i := T;
 
-  while i < B do
+  repeat
   begin
   GotoXY(T,i);
   write('A');
   delay(d);
   i := i + 1;
   end;
+  until i > B;
 
   //============= bawah =============//
 
   i:= L;
 
-  while i < R do
+  repeat
   begin
-  GotoXY(i,B);
-  write('A');
-  delay(d);
-  i := i + 1;
+   GotoXY(i,B);
+   write('A');
+   delay(d);
+   i := i + 1;
   end;
+  until i > R;
 
   readkey;
 end.
