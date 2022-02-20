@@ -54,17 +54,4 @@ begin
   readkey;
 end.
 
-{
-//============= bawah =============//
 
-  i:= L;
-
-  repeat
-  begin
-   GotoXY(i,B);
-   write('A');
-   delay(d);
-   i := i + 1;
-  end;
-  until i > R;
-}
