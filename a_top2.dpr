@@ -17,59 +17,59 @@ begin
    //========== atas =========//
   i:=L;
   a_Top:;
-  GotoXY(i,T);
 
-  write('A');
-  delay(d);
-
-  i := i + 1;
   if i < R then
   begin
+    GotoXY(i,T);
+    write('A');
+    delay(d);
+    i := i + 1;
     goto a_Top;
   end;
+
 
   //========== kanan ===========//
 
   i := T;
   a_Rgt:;
-  GotoXY(R,i);
 
-  write('A');
-  delay(d);
-  i := i + 1;
   if i < B then
   begin
+
+    GotoXY(R,i);
+    write('A');
+    delay(d);
+    i := i + 1;
     goto a_Rgt;
-  end;
-
-  //=========== kiri ============//
-
-  i := T;
-  a_Lft:;
-  GotoXY(T,i);
-
-  write('A');
-  delay(d);
-  i := i + 1;
-  if i < B then
-  begin
-    goto a_Lft;
   end;
 
   //============= bawah =============//
 
-  i:= L;
+  i:= R;
   a_Dwn:;
-  GotoXY(i,B);
 
-  write('A');
-  delay(d);
-  i := i + 1;
-  if i < R then
+  if i > L then
   begin
+    GotoXY(i,B);
+    write('A');
+    delay(d);
+    i := i - 1;
     goto a_Dwn;
   end;
 
+  //=========== kiri ============//
+
+  i := B;
+  a_Lft:;
+
+  if i > T then
+  begin
+    GotoXY(L,i);
+    write('A');
+    delay(d);
+    i := i - 1;
+    goto a_Lft;
+  end;
 
   readkey;
 end.
