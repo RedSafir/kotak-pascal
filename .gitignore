@@ -1,3 +1,4 @@
+*.~dpr
 *.dof
 *.exe
 *.dll
