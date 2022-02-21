@@ -1,4 +1,4 @@
-
+*.dof
 *.exe
 *.dll
 *.bpl
