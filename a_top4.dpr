@@ -69,32 +69,3 @@ begin
 
   readkey;
 end.
-
-{
-//============= bawah =============//
-
-  i := R;
-
-  a_Dwn:;
-  GotoXY(i,B);
-
-  write('A');
-  delay(d);
-  i := i - 1;
-  if i > L then
-  goto a_Dwn;
-
-
-  //=========== kiri ============//
-
-  i := B;
-
-  a_Lft:;
-  GotoXY(T,i);
-
-  write('A');
-  delay(d);
-  i := i - 1;
-  if i > T then
-  goto a_Lft;
-}
