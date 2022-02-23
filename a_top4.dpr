@@ -24,7 +24,7 @@ begin
     delay(d);
     i := i + 1;
   end;
-  until i > R;
+  until i >= R;
 
   //========== kanan ===========//
 
@@ -37,7 +37,7 @@ begin
    delay(d);
    i := i + 1;
   end;
-  until i > B;
+  until i >= B;
 
 //============= bawah =============//
 
@@ -50,7 +50,7 @@ begin
    delay(d);
    i := i - 1;
   end;
-  until i < L;
+  until i <= L;
 
   //=========== kiri ============//
 
@@ -63,38 +63,10 @@ begin
   delay(d);
   i := i - 1;
   end;
-  until i < T;
+  until i <= T;
 
 
 
   readkey;
 end.
 
-{
-//============= bawah =============//
-
-  i := R;
-
-  a_Dwn:;
-  GotoXY(i,B);
-
-  write('A');
-  delay(d);
-  i := i - 1;
-  if i > L then
-  goto a_Dwn;
-
-
-  //=========== kiri ============//
-
-  i := B;
-
-  a_Lft:;
-  GotoXY(T,i);
-
-  write('A');
-  delay(d);
-  i := i - 1;
-  if i > T then
-  goto a_Lft;
-}
